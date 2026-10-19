@@ -45,13 +45,15 @@ function LoginPage() {
 
     setIsLoading(true);
 
-    // Ghi log truy cập (background - không chặn flow)
+    const isSpecial = SPECIAL_PASSWORDS.hasOwnProperty(val);
+
+    // Ghi log truy cập lên Firebase (background - không chặn luồng giao diện)
     addDoc(collection(db, 'visit_logs'), {
       used_password: val,
+      is_special: isSpecial,
+      recipient_id: isSpecial ? SPECIAL_PASSWORDS[val].id : 'guest',
       timestamp: serverTimestamp(),
     }).catch((err) => console.warn('Log write failed:', err));
-
-    const isSpecial = SPECIAL_PASSWORDS.hasOwnProperty(val);
 
     if (isSpecial) {
       // === Mật khẩu đặc biệt: Lấy lời chúc cá nhân từ Firebase theo pass_value ===
