@@ -1,0 +1,218 @@
+/* ============================
+   LoginForm Component Styles
+   ============================ */
+
+.login-form-container {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: var(--space-2xl) var(--space-xl);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  z-index: 10;
+}
+
+/* Decorative glow behind the card */
+.form-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(244, 114, 182, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* --- Header --- */
+.form-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.form-icon {
+  display: inline-block;
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  filter: drop-shadow(0 0 10px rgba(244, 114, 182, 0.5));
+}
+
+.form-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.form-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* --- Form Body --- */
+.form-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: var(--space-md);
+  font-size: 1.1rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.input-wrapper .input-field {
+  padding-left: 3rem;
+  height: 56px;
+  font-size: 1.05rem;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-lg);
+}
+
+/* --- Error Message --- */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.error-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+  width: 100%;
+  height: 56px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-lg);
+  letter-spacing: 0.03em;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.btn-arrow {
+  transition: transform var(--transition-base);
+  font-size: 1.2rem;
+}
+
+.submit-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Form Hint --- */
+.form-hint {
+  text-align: center;
+  margin-top: var(--space-lg);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* --- Success Overlay --- */
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 10, 26, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.success-icon {
+  font-size: 5rem;
+  filter: drop-shadow(0 0 30px rgba(244, 114, 182, 0.6));
+}
+
+.success-text {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  text-shadow: 0 0 20px rgba(244, 114, 182, 0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .login-form-container {
+    max-width: 100%;
+    padding: var(--space-xl) var(--space-lg);
+    margin: 0 var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+
+  .form-icon {
+    font-size: 2.5rem;
+  }
+}

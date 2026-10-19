@@ -1,0 +1,63 @@
+/* ============================
+   LoginPage Styles
+   ============================ */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* --- Date Badge --- */
+.date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-full);
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.date-icon {
+  font-size: 1.2rem;
+}
+
+.date-text {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* --- Footer --- */
+.login-footer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* --- Responsive --- */
+@media (max-width: 480px) {
+  .login-content {
+    padding: var(--space-lg) var(--space-md);
+  }
+}
