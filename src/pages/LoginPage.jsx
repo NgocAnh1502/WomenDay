@@ -433,7 +433,7 @@ function LoginPage() {
                     Hy vọng thiết bị tương thích và mang lại trải nghiệm tốt nhất cho bạn.
                   </span>
                   <span>
-                    Admin xin nhận phản hồi thông qua ib cá nhân ạ <3
+                    Rất vui khi được nhận phản hồi qua ib cá nhân
                   </span>
                 </p>
               </div>
