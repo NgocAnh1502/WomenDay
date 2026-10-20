@@ -432,6 +432,9 @@ function LoginPage() {
                   <span>
                     Hy vọng thiết bị tương thích và mang lại trải nghiệm tốt nhất cho bạn.
                   </span>
+                  <span>
+                    Admin xin nhận phản hồi thông qua ib cá nhân ạ <3
+                  </span>
                 </p>
               </div>
 
